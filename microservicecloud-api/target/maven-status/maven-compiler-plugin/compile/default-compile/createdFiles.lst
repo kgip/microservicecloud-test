@@ -1,0 +1,5 @@
+com\lxg\springcloud\entity\Employee.class
+com\lxg\springcloud\service\EmployeeService.class
+com\lxg\springcloud\entity\ConstomFallBackFactory.class
+com\lxg\springcloud\entity\ResultObject.class
+com\lxg\springcloud\entity\ConstomFallBackFactory$1.class

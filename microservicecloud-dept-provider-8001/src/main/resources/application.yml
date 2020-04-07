@@ -1,0 +1,55 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    druid:
+      username: root
+      password: 19981021
+      url: jdbc:mysql://localhost:3306/microservicecloud-test?serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      max-active: 20
+      max-wait: 60000
+      poolPreparedStatements: true
+      validationQuery: SELECT 1 FROM DUAL
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      #statViewServlet
+      stat-view-servlet:
+        login-username: admin
+        login-password: 19981021
+        allow:
+        enabled: true
+        url-pattern: /druid/*
+      #statFilter
+      web-stat-filter:
+        url-pattern: /druid/*
+        exclusions:
+          - druid/*
+        enabled: true
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  redis:
+    timeout: 600000
+    timeofLive: 10
+  application:
+    name: dept-provider
+mybatis:
+  mapper-locations: mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    lazy-loading-enabled: true
+    cache-enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: dept-provider-8001
+info:
+  app.name: dept-provider-8001
+  company.name: www.lxg.com
+  build.artifactid: $project.artifactid$
+  build.version: $project.version$

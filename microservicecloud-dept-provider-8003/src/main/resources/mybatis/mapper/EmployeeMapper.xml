@@ -1,0 +1,31 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lxg.springcloud.mapper.EmployeeMapper">
+    <insert id="add">
+        insert into ${db_source} values
+        (#{id},#{name},#{gender},#{birth},database())
+    </insert>
+    <delete id="deleteById">
+        delete from dept
+        <where>
+            id = #{id}
+        </where>
+    </delete>
+    <select id="get" resultType="com.lxg.springcloud.entity.Employee">
+        select * from dept where id = #{id}
+    </select>
+    <select id="list" resultType="com.lxg.springcloud.entity.Employee">
+        select * from dept
+    </select>
+    <update id="update">
+        update dept
+        <set>
+            name = #{name},
+            gender = #{gender},
+            birth = #{birth},
+            db_source = database()
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+</mapper>

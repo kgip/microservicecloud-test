@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservicecloud-eureka-7003" />
+        <module name="microservicecloud-eureka-7002" />
+        <module name="microservicecloud-eureka-7001" />
+        <module name="microservicecloud-dept-provider-8003" />
+        <module name="microservicecloud-dept-provider-8002" />
+        <module name="microservicecloud-dept-provider-8001" />
+        <module name="microservicecloud-dept-consumer-80" />
+        <module name="microservicecloud-hystrixdashboard-6001" />
+        <module name="microservicecloud-gateway-9000" />
+        <module name="microservicecloud-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ear" target="1.9" />
+      <module name="ejbs" target="1.9" />
+      <module name="logging" target="1.9" />
+      <module name="microservicecloud-dept-comsumer-80" target="1.9" />
+      <module name="microservicecloud-dept-consumer-81" target="11" />
+      <module name="primary-source" target="1.9" />
+      <module name="projects" target="1.9" />
+      <module name="servlet" target="1.9" />
+      <module name="servlets" target="1.9" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="microservicecloud-api" options="-parameters" />
+      <module name="microservicecloud-dept-comsumer-80" options="-parameters" />
+      <module name="microservicecloud-dept-consumer-80" options="-parameters" />
+      <module name="microservicecloud-dept-consumer-81" options="-parameters" />
+      <module name="microservicecloud-dept-provider-8001" options="-parameters" />
+      <module name="microservicecloud-dept-provider-8002" options="-parameters" />
+      <module name="microservicecloud-dept-provider-8003" options="-parameters" />
+      <module name="microservicecloud-eureka-7001" options="-parameters" />
+      <module name="microservicecloud-eureka-7002" options="-parameters" />
+      <module name="microservicecloud-eureka-7003" options="-parameters" />
+      <module name="microservicecloud-gateway-9000" options="-parameters" />
+      <module name="microservicecloud-hystrixdashboard-6001" options="-parameters" />
+    </option>
+  </component>
+</project>
